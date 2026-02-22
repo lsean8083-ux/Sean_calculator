@@ -25,16 +25,14 @@ if __name__ == "__main__":
     root = Tk()
     root.configure(bg="light green")
     root.title("Sean Calculator")
-	# fix the size of the table, make it empty blank so the table will be automatically fit 
-    root.geometry("")
 
     BUTTON_HEIGHT = 1
     BUTTON_WIDTH  = 7
 
 	# setting the display screem
     display = StringVar()
-    entry = Entry(root, textvariable=display)
-    entry.grid(columnspan=4, ipadx=70)
+    entry = Entry(root, textvariable=display)	
+    entry.grid(columnspan=4, ipadx=70, sticky="nsew")
 
 	# 数字按钮布局：(数字, row行, column列)
 	buttons = [
@@ -69,4 +67,7 @@ if __name__ == "__main__":
     dot = Button(root, text='.', fg='black', bg='red', command=lambda: press('.'), height=BUTTON_HEIGHT, width=BUTTON_WIDTH)
     dot.grid(row=6, column=0)
 
+	# fix the size of the table, make it empty blank so the table will be automatically fit 
+    root.geometry("")
+    root.update()
     root.mainloop()
