@@ -28,6 +28,9 @@ if __name__ == "__main__":
 	# fix the size of the table, make it empty blank so the table will be automatically fit 
     root.geometry("")
 
+    BUTTON_HEIGHT = 1
+    BUTTON_WIDTH  = 7
+
     display = StringVar()
     entry = Entry(root, textvariable=display)
     entry.grid(columnspan=4, ipadx=70)
@@ -44,25 +47,25 @@ if __name__ == "__main__":
     for num, row, col in buttons:
         btn = Button(root, text=str(num), fg='black', bg='red',
                      command=lambda n=num: press(n),
-                     height=1, width=7)
+                     height = BUTTON_HEIGHT, width = BUTTON_WIDTH)
         btn.grid(row=row, column=col)
 
     # Operator buttons
-    plus = Button(root, text='+', fg='black', bg='red', command=lambda: press('+'), height=1, width=7)
+    plus = Button(root, text='+', fg='black', bg='red', command=lambda: press('+'), height=BUTTON_HEIGHT, width=BUTTON_WIDTH)
     plus.grid(row=2, column=3)
-    minus = Button(root, text='-', fg='black', bg='red', command=lambda: press('-'), height=1, width=7)
+    minus = Button(root, text='-', fg='black', bg='red', command=lambda: press('-'), height=BUTTON_HEIGHT, width=BUTTON_WIDTH)
     minus.grid(row=3, column=3)
-    mult = Button(root, text='*', fg='black', bg='red', command=lambda: press('*'), height=1, width=7)
+    mult = Button(root, text='*', fg='black', bg='red', command=lambda: press('*'), height=BUTTON_HEIGHT, width=BUTTON_WIDTH)
     mult.grid(row=4, column=3)
-    div = Button(root, text='/', fg='black', bg='red', command=lambda: press('/'), height=1, width=7)
+    div = Button(root, text='/', fg='black', bg='red', command=lambda: press('/'), height=BUTTON_HEIGHT, width=BUTTON_WIDTH)
     div.grid(row=5, column=3)
 
     # Other buttons
-    eq = Button(root, text='=', fg='black', bg='red', command=equal, height=1, width=7)
+    eq = Button(root, text='=', fg='black', bg='red', command=equal, height=1, width=BUTTON_WIDTH)
     eq.grid(row=5, column=2)
-    clr = Button(root, text='Clear', fg='black', bg='red', command=clear, height=1, width=7)
+    clr = Button(root, text='Clear', fg='black', bg='red', command=clear, height=1, width=BUTTON_WIDTH)
     clr.grid(row=5, column=1)
-    dot = Button(root, text='.', fg='black', bg='red', command=lambda: press('.'), height=1, width=7)
+    dot = Button(root, text='.', fg='black', bg='red', command=lambda: press('.'), height=1, width=BUTTON_WIDTH)
     dot.grid(row=6, column=0)
 
     root.mainloop()
