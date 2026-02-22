@@ -24,7 +24,7 @@ def clear():
 if __name__ == "__main__":
     root = Tk()
     root.configure(bg="light green")
-    root.title("Simple Calculator")
+    root.title("Sean Calculator")
 	# fix the size of the table, make it empty blank so the table will be automatically fit 
     root.geometry("")
 
