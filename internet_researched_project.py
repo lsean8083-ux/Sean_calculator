@@ -31,6 +31,7 @@ if __name__ == "__main__":
     BUTTON_HEIGHT = 1
     BUTTON_WIDTH  = 7
 
+	# setting the display screem
     display = StringVar()
     entry = Entry(root, textvariable=display)
     entry.grid(columnspan=4, ipadx=70)
@@ -43,7 +44,7 @@ if __name__ == "__main__":
         (0, 5, 0)
     ]
 
-    # 用 for 循环批量创建
+    # 用 for 循环批量创建数字按钮
     for num, row, col in buttons:
         btn = Button(root, text=str(num), fg='black', bg='red',
                      command=lambda n=num: press(n),
