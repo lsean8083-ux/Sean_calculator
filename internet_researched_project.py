@@ -68,6 +68,6 @@ if __name__ == "__main__":
     dot.grid(row=6, column=0)
 
 	# fix the size of the table, make it empty blank so the table will be automatically fit 
-    root.geometry("")
     root.update()
+    root.geometry("")
     root.mainloop()
