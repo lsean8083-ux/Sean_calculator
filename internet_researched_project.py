@@ -25,7 +25,8 @@ if __name__ == "__main__":
     root = Tk()
     root.configure(bg="light green")
     root.title("Simple Calculator")
-    root.geometry("270x150")
+	# fix the size of the table, make it empty blank so the table will be automatically fit 
+    root.geometry("")
 
     display = StringVar()
     entry = Entry(root, textvariable=display)
