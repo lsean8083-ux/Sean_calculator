@@ -23,7 +23,8 @@ def clear():
 
 if __name__ == "__main__":
     root = Tk()
-    root.configure(bg="light green")
+	#change the color
+    root.configure(bg="")
     root.title("Sean Calculator")
 
     BUTTON_HEIGHT = 1
