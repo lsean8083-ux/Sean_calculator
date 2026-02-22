@@ -35,18 +35,18 @@ if __name__ == "__main__":
     entry = Entry(root, textvariable=display)	
     entry.grid(columnspan=4, ipadx=70, sticky="nsew")
 
-	# 数字按钮布局：(数字, row行, column列)
-	buttons = [
-        (1, 2, 0), (2, 2, 1), (3, 2, 2),
-        (4, 3, 0), (5, 3, 1), (6, 3, 2),
-        (7, 4, 0), (8, 4, 1), (9, 4, 2),
-        (0, 5, 0)
+    # 数字按钮布局：(数字, row行, column列)
+    buttons = [
+        (‘1’, 2, 0), (‘2’, 2, 1), (‘3’, 2, 2),
+        (‘4’, 3, 0), (‘5’, 3, 1), (‘6’, 3, 2),
+        (‘7’, 4, 0), (‘8’, 4, 1), (‘9’, 4, 2),
+        (‘0’, 5, 0)
     ]
 
     # 用 for 循环批量创建数字按钮
     for num, row, col in buttons:
-        btn = Button(root, text=str(num), fg='black', bg='red',
-                     command=lambda n=num: press(n),
+        btn = Button(root, text=num, fg='black', bg='red',
+                     command=lambda n=int(num): press(n),
                      height = BUTTON_HEIGHT, width = BUTTON_WIDTH)
         btn.grid(row=row, column=col)
 
